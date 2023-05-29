@@ -1,13 +1,120 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  text-transform: capitalize;
+  font-family: isans !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .activLinkDark {
+    color: white !important;
+    position: relative;
+    transition: all ease 0.3s;
+  }
+
+  .my-line-chart .recharts-cartesian-axis-line,
+  .my-line-chart .recharts-cartesian-axis-tick-line {
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+
+  .recharts-cartesian-axis-label {
+    font-size: 14px;
+    fill: #fff;
+  }
+
+  .showGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .showGrid2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .bgGradinet1 {
+    background: linear-gradient(to left, #52449b 100%, #7d12af88 100%);
+  }
+  .bgGradinet2 {
+    background: linear-gradient(to left, #a453cb 100%, #8b10b6 100%);
+  }
+  .bgGradinet3 {
+    background: linear-gradient(to left, #8a40fc 100%, #d577f3 100%);
+  }
+
+  /*
+ *  STYLE 2
+ */
+
+  .hibech::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: transparent;
+    padding: 5px;
+  }
+
+  .hibech::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+    padding: 5px;
+  }
+
+  .hibech::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #52449b;
+  }
+
+  .activLinkDark::after {
+    content: "";
+    position: absolute;
+    left: -24px;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    height: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #5c3cad;
+  }
+
+  .activLinkLigh {
+    color: #222 !important;
+    position: relative;
+    transition: all ease 0.3s;
+  }
+
+  .math-h {
+    height: calc(100vh - 25px);
+  }
+
+  .path-p {
+    -webkit-clip-path: circle(45.4% at 50% 50%);
+    clip-path: circle(45.4% at 50% 50%);
+  }
+
+  .activLinkLigh::after {
+    content: "";
+    position: absolute;
+    left: -24px;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    height: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #5c3cad;
+  }
+  .show {
+    transition: all ease 0.3s;
+    position: absolute;
+    left: -90px !important;
+  }
+
+  .dontShow {
+    transition: all ease 0.3s;
+    position: absolute;
+    left: -800px !important;
+  }
 }
